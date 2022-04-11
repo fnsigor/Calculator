@@ -13,7 +13,7 @@ document.querySelectorAll('.buttons').forEach(bt => {
         if(isDelete){
             cleanDisplay()  
         } else if(isXy){
-            display.append(display.append('^')             
+            display.append('^')             
         } else if(isEqual){
             calculateResult()    
         } else{
