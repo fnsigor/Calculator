@@ -9,18 +9,15 @@ document.querySelectorAll('.buttons').forEach(bt => {
         const isXy = bt.innerHTML == 'X<sup>y</sup>'
         const isDelete = bt.innerHTML == 'CE'
         const isEqual = bt.innerHTML == '='
-        let newLi = document.createElement('li')
 
         if(isDelete){
-            cleanDisplay()
+            cleanDisplay()  
         } else if(isXy){
-            newLi = '^'
-            display.append(newLi)
+            display.append(display.append('^')             
         } else if(isEqual){
-            calculateResult()
+            calculateResult()    
         } else{
-            newLi = bt.innerHTML
-            display.append(newLi)
+            display.append(bt.innerHTML)
         }
     })
 
