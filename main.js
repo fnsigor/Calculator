@@ -2,7 +2,7 @@
 const display = document.getElementById('display')
 let displayCount
 
-//forEach to show buttons in display
+//forEach to apply functions to buttons
 document.querySelectorAll('.buttons').forEach(bt => {
     bt.addEventListener('click', () => {
 
@@ -17,7 +17,7 @@ document.querySelectorAll('.buttons').forEach(bt => {
             newLi = '^'
             display.append(newLi)
         } else if(isEqual){
-            
+            calculateResult()
         } else{
             newLi = bt.innerHTML
             display.append(newLi)
@@ -27,8 +27,7 @@ document.querySelectorAll('.buttons').forEach(bt => {
 })
 
 
-//event to calculate when pressing the = button
-document.querySelector('.equal').addEventListener('click', ()=>{
+function calculateResult(){
     let result = 0
     displayCount = display.textContent.trim()
         
@@ -91,7 +90,7 @@ document.querySelector('.equal').addEventListener('click', ()=>{
         default:
             break;
     }
-})
+}
 
 
 function getOperator(){
